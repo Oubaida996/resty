@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import Header from "./components/Header/Header";
+import Form from "./components/Form/Form";
+import Results from "./components/Results/Results";
+
 
 function App() {
+  let data = {};
+  let show = false;
+  const getUrl = (event) => {
+    event.preventDefault();
+    data['url'] = event.target.url.value; //url the name of input inside form
+    data['method'] = event.target.methods.value;//methods the name of select 
+    data['body'] = event.target.body.value;
+    console.log('data.url', data.url);
+    console.log('data.url', data.method);
+    console.log('data.url', data.body);
+    event.target.url.value = '';
+    show = true;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="resty">Resty</div>
+      <Header />
+      <Form getUrl={getUrl} />
+      {show ? <Results data={data} /> : null}
+
+    </>
   );
 }
 

@@ -1,0 +1,22 @@
+.results {
+    padding: 10px;
+    display: flex;
+}
+
+.history {
+    margin: 5px;
+    padding: 10px;
+    justify-content: flex-start;
+    justify-items: center;
+    width: 30%;
+    background-color: blueviolet;
+}
+
+.body-result {
+    margin: 5px;
+    padding: 10px;
+    justify-content: flex-end;
+    justify-items: center;
+    width: 70%;
+    background-color: cadetblue;
+}
