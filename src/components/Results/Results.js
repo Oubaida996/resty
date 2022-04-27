@@ -8,7 +8,11 @@ export default function Results(props) {
                 <span>{props.data.methods}</span>
                 <span>{props.data.url}</span>
             </div>
-            <div className="body-result">body-result {props.data.body}</div>
+            <div className="body-result">
+                body-result
+                {console.log('results', props.data)}
+                <div><pre>{JSON.stringify(props.data, null, 3)}</pre></div>
+            </div>
         </div>
     )
 }

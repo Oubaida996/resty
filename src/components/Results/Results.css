@@ -1,24 +1,29 @@
 .results {
     padding: 10px;
     display: flex;
+    margin-bottom: 20px;
 }
 
 .history {
     margin: 5px;
     padding: 10px;
-    justify-content: flex-start;
-    justify-items: center;
+    height: 20px;
     width: 30%;
+    text-align: center;
     background-color: blueviolet;
+    border: 1px solid;
+    border-radius: 10px;
 }
 
 .body-result {
     margin: 5px;
     padding: 10px;
-    justify-content: flex-end;
-    justify-items: center;
     width: 70%;
+    height: 400px;
     background-color: cadetblue;
+    border: 1px solid;
+    border-radius: 10px;
+    overflow: auto;
 }
 
 span {
