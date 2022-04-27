@@ -1,29 +1,48 @@
 import React, { useRef } from 'react'
 import './Form.css'
+import { useState, useEffect } from "react";
+const axios = require('axios');
 
 export default function Form(props) {
   const methodsRef = useRef();
   const urlRef = useRef();
   const bodyRef = useRef();
+  const [newData, setNewData] = useState({});
 
-  const handelData = (event) => {
+  const handelData = async (event) => {
     event.preventDefault();
 
     const url = urlRef.current.value;
     const methods = methodsRef.current.value;
     const body = bodyRef.current.value;
 
-    let data = {
+    let dataForm = {
       'url': url,
       'methods': methods,
       'body': body
     }
-    props.getData(data);
 
-    console.log('data.url', url);
-    console.log('data.method', methods);
-    console.log('data.body', body);
-    event.target.url.value = '';
+    await axios.get(dataForm.url).then(res => {
+      dataForm['response'] = res.data.data;
+      setNewData(dataForm);
+
+      // console.log('data boky', newData);
+      // setData(newData);
+      // console.log('data boky', data);
+
+    }).catch(e => {
+      console.log(e);
+    });
+
+    props.getData(dataForm);
+
+    // if (data.body) {
+    //   data.body = body;
+    // }
+    // console.log('data.url', url);
+    // console.log('data.method', methods);
+    // console.log('data.body', body);
+    // event.target.url.value = '';
     // event.preventDefault();
     // data['url'] = event.target.url.value; //url the name of input inside form
     // data['method'] = event.target.methods.value;//methods the name of select 
