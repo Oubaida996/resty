@@ -5,6 +5,9 @@ Our application will be an API testing tool that can be run in any browser, allo
 # PR  
 [PR](https://github.com/Oubaida996/resty/pull/1)  
 
+# netlify  
+[netlify](https://6269a7141c9ee60059477dac--warm-hotteok-09251b.netlify.app/)  
+
 # UML  
 ![UML](./assets/Resty_uml.jpg)  
 
