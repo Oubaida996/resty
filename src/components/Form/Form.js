@@ -6,15 +6,20 @@ const axios = require('axios');
 export default function Form(props) {
   const methodsRef = useRef();
   const urlRef = useRef();
-  const bodyRef = useRef();
-  const [newData, setNewData] = useState({});
+  const bodyRef = useRef({
+    "name": "morpheus",
+    "job": "leader"
+  });
 
   const handelData = async (event) => {
     event.preventDefault();
 
     const url = urlRef.current.value;
     const methods = methodsRef.current.value;
-    const body = bodyRef.current.value;
+    let body = bodyRef.current.value;
+    if (body) {
+      body = JSON.parse(body)
+    }
 
     let dataForm = {
       'url': url,
@@ -22,19 +27,76 @@ export default function Form(props) {
       'body': body
     }
 
-    await axios.get(dataForm.url).then(res => {
-      dataForm['response'] = res.data.data;
-      setNewData(dataForm);
 
-      // console.log('data boky', newData);
-      // setData(newData);
-      // console.log('data boky', data);
+    async function getMethod() {
+      await axios.get(dataForm.url).then(res => {
+        dataForm['response'] = res.data.data;
+        props.getData(dataForm);
+      }).catch(e => {
+        console.log(e);
+      });
+    }
 
-    }).catch(e => {
-      console.log(e);
-    });
+    async function postMethod() {
+      await axios.post(dataForm.url, dataForm.body)
+        .then(function (res) {
+          console.log('resssssssss', res.status);
+          dataForm['response'] = res.data;
+          // setNewData(dataForm);  
+          props.getData(dataForm);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
 
-    props.getData(dataForm);
+    async function updateMethod() {
+      await axios.put(dataForm.url, dataForm.body)
+        .then(function (res) {
+          console.log('resssssssss', res.status);
+          dataForm['response'] = res.data;
+          // setNewData(dataForm);  
+          props.getData(dataForm);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+
+    async function deleteMethod() {
+      await axios.delete(dataForm.url, dataForm.body)
+        .then(function (res) {
+          console.log('resssssssss', res.status);
+          dataForm['response'] = res.data;
+          // setNewData(dataForm);  
+          props.getData(dataForm);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+
+
+    switch (dataForm.methods) {
+      case 'get':
+        await getMethod();
+        break;
+      case 'post':
+        await postMethod();
+        break;
+      case 'update':
+        await updateMethod();
+        break;
+      case 'delete':
+        await deleteMethod();
+        break;
+
+      default:
+        break;
+    }
+
+
+
 
     // if (data.body) {
     //   data.body = body;
