@@ -8,7 +8,14 @@ Our application will be an API testing tool that can be run in any browser, allo
 # netlify  
 [netlify](https://6269a7141c9ee60059477dac--warm-hotteok-09251b.netlify.app/)  
 [API LINK](https://reqres.in/api/users)  
-for test
+
+## for test  
+
+body  
+{
+    "name": "obieda",
+    "job": "leader"
+}
 
 # UML  
 ![UML](./assets/Resty_uml.jpg)  
