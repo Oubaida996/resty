@@ -2,8 +2,11 @@
 ***A browser based API testing tool***  
 Our application will be an API testing tool that can be run in any browser, allowing a user to easily interact with APIs in a familiar interface.  
 
-# PR  
+# PR  1
 [PR](https://github.com/Oubaida996/resty/pull/1)  
+
+# PR  2
+[PR](https://github.com/Oubaida996/resty/pull/3)  
 
 # netlify  
 [netlify](https://626a19c39e90780008bedf37--warm-hotteok-09251b.netlify.app/)  
