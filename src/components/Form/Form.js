@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import './Form.css'
+import './Form.sass'
 import { useState, useEffect } from "react";
 const axios = require('axios');
 
@@ -30,7 +30,9 @@ export default function Form(props) {
 
     async function getMethod() {
       await axios.get(dataForm.url).then(res => {
+        console.log('resssssssss', res.headers);
         dataForm['response'] = res.data.data;
+        dataForm['headers'] = res.headers;
         props.getData(dataForm);
       }).catch(e => {
         console.log(e);
@@ -40,8 +42,9 @@ export default function Form(props) {
     async function postMethod() {
       await axios.post(dataForm.url, dataForm.body)
         .then(function (res) {
-          console.log('resssssssss', res.status);
+          console.log('resssssssss', res);
           dataForm['response'] = res.data;
+          dataForm['headers'] = res.headers;
           // setNewData(dataForm);  
           props.getData(dataForm);
         })
@@ -53,8 +56,9 @@ export default function Form(props) {
     async function updateMethod() {
       await axios.put(dataForm.url, dataForm.body)
         .then(function (res) {
-          console.log('resssssssss', res.status);
+          // console.log('resssssssss', res.status);
           dataForm['response'] = res.data;
+          dataForm['headers'] = res.headers;
           // setNewData(dataForm);  
           props.getData(dataForm);
         })
@@ -66,8 +70,9 @@ export default function Form(props) {
     async function deleteMethod() {
       await axios.delete(dataForm.url, dataForm.body)
         .then(function (res) {
-          console.log('resssssssss', res.status);
+          // console.log('resssssssss', res.status);
           dataForm['response'] = res.data;
+          dataForm['headers'] = res.headers;
           // setNewData(dataForm);  
           props.getData(dataForm);
         })

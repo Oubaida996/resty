@@ -1,5 +1,8 @@
 import React from 'react'
-import './Results.css'
+import './Results.sass'
+import JSONPretty from 'react-json-pretty'
+import JSONPrettyMon from 'react-json-pretty/themes/monikai.css';
+
 
 export default function Results(props) {
     return (
@@ -9,10 +12,12 @@ export default function Results(props) {
                 <span>{props.data.url}</span>
             </div>
             <div className="body-result">
-                body-result
                 {console.log('results', props.data)}
-                <div><pre>{JSON.stringify(props.data, null, 3)}</pre></div>
+                <div>header : <JSONPretty theme={JSONPrettyMon} id='json-pretty' data={props.data.headers} /></div>
+                <div>response : <JSONPretty theme={JSONPrettyMon} id='json-pretty' data={props.data.response} /></div>
+                {/* <div><pre>header : {JSON.stringify(props.data.headers, null, 3)}</pre></div>
+            <div><pre>response : {JSON.stringify(props.data.response, null, 3)}</pre></div> */}
             </div>
-        </div>
+        </div >
     )
 }
