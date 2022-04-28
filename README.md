@@ -11,13 +11,24 @@ Our application will be an API testing tool that can be run in any browser, allo
 
 ## for test  
 
-body  
+  https://reqres.in/api/users (get method)    
+
+body  https://reqres.in/api/users (post method)
   
 
-    "name": "obieda",  
-    "job": "leader"
+    {"name": "obieda",  
+    "job": "leader"}  
+    
+    
+body  https://reqres.in/api/users/:id (update method)
+  
 
-
+    {"name": "obieda",  
+    "job": "leader"}  
+    
+    
+  https://reqres.in/api/users/:id (delete method)
+  
 # UML  
 ![UML](./assets/Resty_uml.jpg)  
 
