@@ -12,30 +12,12 @@ function App() {
     'methods': 'get',
     'body': ''
   });
-  // const [newData, setNewData] = useState({});
   const [loading, setLoading] = useState(false);
 
 
-  // useEffect(() => {
-  //   callApi();
-  // }, [data, newData]);
-
-  // const callApi = async () => {
-  //   console.log('dataa', data);
-  //   await axios.get(data.url).then(res => {
-  //     setNewData({ 'response': res.data.data });
-
-  //     console.log('data boky', newData);
-  //     setData(newData);
-  //     console.log('data boky', data);
-
-  //   }).catch(e => {
-  //     console.log(e);
-  //   });
-  // }
 
   const getData = (dataForm) => {
-
+    console.log('dataForm', dataForm);
     setData(dataForm);
     console.log('dataaddd', data);
     setLoading(true);
@@ -49,7 +31,6 @@ function App() {
       <div className="resty">Resty</div>
       <Header />
       <Form getData={getData} />
-      {/* response={newData} */}
       {loading ? <Results data={data} /> : null}
 
     </>
