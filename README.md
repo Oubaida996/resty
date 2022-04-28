@@ -6,7 +6,7 @@ Our application will be an API testing tool that can be run in any browser, allo
 [PR](https://github.com/Oubaida996/resty/pull/1)  
 
 # netlify  
-[netlify](https://6269a7141c9ee60059477dac--warm-hotteok-09251b.netlify.app/)  
+[netlify](https://626a19c39e90780008bedf37--warm-hotteok-09251b.netlify.app/)  
 [API LINK](https://reqres.in/)  
 
 ## for test  
