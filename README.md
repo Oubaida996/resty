@@ -9,7 +9,7 @@ Our application will be an API testing tool that can be run in any browser, allo
 [PR](https://github.com/Oubaida996/resty/pull/3)  
 
 # netlify  
-[netlify](https://626a19c39e90780008bedf37--warm-hotteok-09251b.netlify.app/)  
+[netlify](https://626d0b11299e455894692502--warm-hotteok-09251b.netlify.app/)  
 [API LINK](https://reqres.in/)  
 
 ## for test  
