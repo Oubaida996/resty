@@ -8,6 +8,9 @@ Our application will be an API testing tool that can be run in any browser, allo
 # PR phase 2
 [PR](https://github.com/Oubaida996/resty/pull/3)  
 
+# PR phase 3
+[PR](https://github.com/Oubaida996/resty/pull/4) 
+
 # netlify  
 [netlify](https://626d0b11299e455894692502--warm-hotteok-09251b.netlify.app/)  
 [API LINK](https://reqres.in/)  
@@ -52,4 +55,12 @@ Extend your React Application so that your functional components are able to man
 NOTE: It is not a requirement to make the actual API call. That can be mocked with “fake” data
 
 Refactor any components using this.setState to implement the useState react API hook.
-Refactor the Form Component to implement user input from form elements, instead of hard coded string values.
+Refactor the Form Component to implement user input from form elements, instead of hard coded string values.  
+
+ # Phase 3 Requirements 
+In phase 3, we will be connecting RESTy to live APIs, fetching and displaying remote data. Our primary focus will be to service GET requests
+
+The following user stories detail the major functionality for this phase of the project.
+
+As a user, I want to enter the URL to an API and issue a GET request so that I can retrieve it’s data
+As a user, I want to see the results returned from an API request in my browser in a readable format
