@@ -58,8 +58,9 @@ Refactor any components using this.setState to implement the useState react API 
 Refactor the Form Component to implement user input from form elements, instead of hard coded string values.  
 
  # Phase 3 Requirements 
-Extend your React Application so that your functional components are able to manage their own state variables using the useState Hook.
-NOTE: It is not a requirement to make the actual API call. That can be mocked with “fake” data
+In phase 3, we will be connecting RESTy to live APIs, fetching and displaying remote data. Our primary focus will be to service GET requests
 
-Refactor any components using this.setState to implement the useState react API hook.
-Refactor the Form Component to implement user input from form elements, instead of hard coded string values.
+The following user stories detail the major functionality for this phase of the project.
+
+As a user, I want to enter the URL to an API and issue a GET request so that I can retrieve it’s data
+As a user, I want to see the results returned from an API request in my browser in a readable format
