@@ -30,8 +30,8 @@ export default function Form(props) {
 
     async function getMethod() {
       await axios.get(dataForm.url).then(res => {
-        console.log('resssssssss', res.headers);
-        dataForm['response'] = res.data.data;
+        console.log('resssssfffffffffffffffssss', res);
+        dataForm['response'] = res.data;
         dataForm['headers'] = res.headers;
         props.getData(dataForm);
       }).catch(e => {
