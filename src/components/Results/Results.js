@@ -3,13 +3,17 @@ import './Results.sass'
 import JSONPretty from 'react-json-pretty'
 import JSONPrettyMon from 'react-json-pretty/themes/monikai.css';
 
-
 export default function Results(props) {
     return (
         <div className='results'>
-            <div className="history">
-                <span>{props.data.methods}</span>
-                <span>{props.data.url}</span>
+            {/* {console.log('props.state from result', props.state.historyApi[0].url)} */}
+            <div className='listHistory'>
+                {props.state.historyApi.map((data, index) => {
+                    return <div className="history" key={index}>
+                        <span>{data.methods}</span>
+                        <span>{data.url}</span>
+                    </div>
+                }).reverse()}
             </div>
             <div className="body-result">
                 {console.log('results', props.data)}
