@@ -1,6 +1,8 @@
 import React, { useRef } from 'react'
+
 import './Form.sass'
-import { useState, useEffect } from "react";
+
+
 const axios = require('axios');
 
 export default function Form(props) {
@@ -26,6 +28,19 @@ export default function Form(props) {
       'methods': methods,
       'body': body
     }
+
+    // let test = {
+    //   method: dataForm.methods,
+    //   url: dataForm.url
+    // }
+
+
+
+
+
+
+
+
 
 
     async function getMethod() {
@@ -135,6 +150,8 @@ export default function Form(props) {
         <input ref={urlRef} name='url' className='field' type="text" placeholder='http://api.url.here' />
         <input className='submit' type="submit" value={'GO!'} />
         <br />
+
+
 
         <textarea ref={bodyRef} name="body" id="" cols="30" rows="10" className='body'></textarea>
       </form>

@@ -1,14 +1,15 @@
 .results {
+    width: 100%;
     padding: 10px;
     display: flex;
     margin-bottom: 20px;
 }
 
 .history {
-    margin: 5px;
-    padding: 5px;
-    height: 20px;
-    width: 35%;
+    margin: 5%;
+    padding: 5%;
+    height: 20%;
+    max-width: 35%;
     text-align: center;
     background-color: blueviolet;
     border: 1px solid;

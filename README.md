@@ -11,6 +11,9 @@ Our application will be an API testing tool that can be run in any browser, allo
 # PR phase 3
 [PR](https://github.com/Oubaida996/resty/pull/4) 
 
+# PR phase 3
+[PR]()
+
 # netlify  
 [netlify](https://626d0b11299e455894692502--warm-hotteok-09251b.netlify.app/)  
 [API LINK](https://reqres.in/)  
@@ -64,3 +67,10 @@ The following user stories detail the major functionality for this phase of the 
 
 As a user, I want to enter the URL to an API and issue a GET request so that I can retrieve it’s data
 As a user, I want to see the results returned from an API request in my browser in a readable format
+
+ # Phase 4 Requirements 
+In phase 4,  we will be tracking every API call and storing it in history
+
+The following user stories detail the major functionality for this phase of the project.
+
+As a user, I want to see a list of my previous API calls, so that I can see the results again, quickly.
