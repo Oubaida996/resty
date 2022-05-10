@@ -11,8 +11,8 @@ Our application will be an API testing tool that can be run in any browser, allo
 # PR phase 3
 [PR](https://github.com/Oubaida996/resty/pull/4) 
 
-# PR phase 3
-[PR]()
+# PR phase 4
+[PR](https://github.com/Oubaida996/resty/pull/6)
 
 # netlify  
 [netlify](https://626d0b11299e455894692502--warm-hotteok-09251b.netlify.app/)  
