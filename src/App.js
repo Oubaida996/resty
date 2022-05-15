@@ -28,6 +28,9 @@ function App() {
     setLoading(true);
   }
 
+  const historyData = (data) => {
+    setData(data);
+  }
 
   // const dispatchMethod = (param) => {
   //   console.log('obieda ', param);
@@ -44,7 +47,7 @@ function App() {
       <div className="resty">Resty</div>
       <Header />
       <Form getData={getData} />
-      {loading ? <Results data={data} state={state} /> : null}
+      {loading ? <Results data={data} state={state} historyData={historyData} /> : null}
 
     </>
   );

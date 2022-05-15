@@ -9,7 +9,7 @@ export default function Results(props) {
             {/* {console.log('props.state from result', props.state.historyApi[0].url)} */}
             <div className='listHistory'>
                 {props.state.historyApi.map((data, index) => {
-                    return <div className="history" key={index}>
+                    return <div className="history" key={index} onClick={() => props.historyData(data)}>
                         <span>{data.methods}</span>
                         <span>{data.url}</span>
                     </div>
