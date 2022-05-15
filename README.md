@@ -15,7 +15,7 @@ Our application will be an API testing tool that can be run in any browser, allo
 [PR](https://github.com/Oubaida996/resty/pull/6)
 
 # netlify  
-[netlify](https://deploy-preview-6--warm-hotteok-09251b.netlify.app/)  
+[netlify](https://6280f3806c39100009ea10b2--warm-hotteok-09251b.netlify.app/)  
 [API LINK](https://reqres.in/)  
 
 ## for test  
